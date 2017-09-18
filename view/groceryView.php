@@ -6,21 +6,15 @@ class GroceryView
   function __construct()
   {
     $this->smarty = new Smarty();
+    $this->smarty->assign('titulo', 'MVC Tareas');
   }
-  function agregarError($error){
-    $this->smarty->assign('error',$error);
+  function viewCategories($categories){
+    $this->smarty->assign('categories', $categories);
+    $this->smarty->display('templates/index.tpl');
   }
-  function mostrarMensaje($mensaje, $tipo){
-  //  $this->smarty->assign('mensaje',$mensaje);
-  //  $this->smarty->assign('tipoMensaje',$tipo);
-  }
-  function mostrar($tareas){
-  //  $this->smarty->assign('tareas',$tareas);
-  //  $this->smarty->display('index.tpl');
-  }
-  function getLista($tareas){
-  //  $this->smarty->assign('tareas',$tareas);
-  //  $this->smarty->display('lista.tpl');
+  function viewProducts($products){
+    $this->smarty->assign('products', $products);
+    $this->smarty->display('templates/index.tpl');
   }
 }
- ?>
+?>
