@@ -1,5 +1,7 @@
 <?php
-class ProductModel extends Model
+include_once('GroceryModel.php');
+
+class ProductModel extends GroceryModel
 {
   //vamos a hacer una clase padre y esta va a heredar de la misma
   // asi no repetimos codigo, y la conexion a la base la hacemos una sola vez
@@ -21,4 +23,3 @@ class ProductModel extends Model
     $sentencia->execute([$id]);
   }
 }
- ?>

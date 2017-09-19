@@ -1,24 +1,25 @@
 <?php
-include_once('model/productModel.php');
+include_once('model/ProductModel.php');
 include_once('view/groceryView.php');
 define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
 /**
  *
  */
-class ProductController extends Controller
+class ProductController
 {
   private $view;
   private $model;
   function __construct()
   {
-    $this->GroceryView = new GroceryView();
-    $this->ProductModel = new ProductModel();
+    $this->view = new GroceryView();
+    $this->model = new ProductModel();
 
   }
+
   public function index()
   {
-    $productos = $this->model->listarProductos();
-    $this->view->mostrarProductos($productos);
+    $productos = $this->model->getProducts();
+    $this->view->viewProducts($productos);
   }
 
   public function destroy($params)

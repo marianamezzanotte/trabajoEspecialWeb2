@@ -1,5 +1,5 @@
 <?php
-require('../libs/smarty-3.1.30/libs/Smarty.class.php');
+require('libs/smarty-3.1.30/libs/Smarty.class.php');
 class GroceryView
 {
   private $smarty;
@@ -13,7 +13,7 @@ class GroceryView
     $this->smarty->display('templates/index.tpl');
   }
   function viewProducts($products){
-    $this->smarty->assign('products', $products);
+    $this->smarty->assign('productos', $products);
     $this->smarty->display('templates/index.tpl');
   }
 }

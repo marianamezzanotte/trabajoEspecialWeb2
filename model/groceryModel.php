@@ -7,4 +7,5 @@ class GroceryModel
     .'dbname=db_supermercado;charset=utf8'
     , 'root', '');
   }
+}
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once('model/categoryModel.php');
+include_once('model/CategoryModel.php');
 include_once('view/groceryView.php');
 define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
 /**
