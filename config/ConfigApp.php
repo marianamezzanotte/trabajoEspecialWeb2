@@ -7,6 +7,7 @@ class ConfigApp
       'home'=> 'index',
       ''=> 'index',
       'products' => 'index',
+      'categories' => 'index',
     ];
 
 }

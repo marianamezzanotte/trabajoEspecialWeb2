@@ -10,10 +10,11 @@ class GroceryView
   }
   function viewCategories($categories){
     $this->smarty->assign('categories', $categories);
-    $this->smarty->display('templates/index.tpl');
+    $this->smarty->display('templates/categorias.tpl');
   }
-  function viewProducts($products){
+  function viewProducts($products, $categories){
     $this->smarty->assign('productos', $products);
+    $this->smarty->assign('categories', $categories);
     $this->smarty->display('templates/index.tpl');
   }
 }
