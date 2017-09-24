@@ -26,8 +26,11 @@ if(isset($_GET['action'])){
             $controllerCategory->$metodo();
             break;
           case 'products':
-              $controllerProduct->$metodo();
-              break;
+            $controllerProduct->$metodo();
+            break;
+          case 'addCategory':
+            $controllerCategory->$metodo();
+            break;
           default:
           $controllerProduct->$metodo();
             //http_response_code(404);

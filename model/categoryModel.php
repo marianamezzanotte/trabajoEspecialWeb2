@@ -15,8 +15,8 @@ class CategoryModel extends GroceryModel
   }
 
   function updateCategory($id, $nombre){
-    $sentencia = $this->db->prepare('');
-    $sentencia->execute([$id, $nombre]);
+    $sentencia = $this->db->prepare('UPDATE categorias SET nombre = ? WHERE id = ?');
+    $sentencia->execute([$nombre, $id]);
   }
 
   function deleteCategory($id){

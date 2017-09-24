@@ -8,6 +8,7 @@ class ConfigApp
       ''=> 'index',
       'products' => 'index',
       'categories' => 'index',
+      'addCategory'=> 'showAddCategory'
     ];
 
 }
