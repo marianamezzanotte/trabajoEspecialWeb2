@@ -9,9 +9,12 @@ class GroceryView
     $this->smarty->assign('titulo', 'MVC Tareas');
   }
   function viewProducts($products, $categories){
-    $this->smarty->assign('productos', $products);
+    $this->smarty->assign('products', $products);
     $this->smarty->assign('categories', $categories);
     $this->smarty->display('templates/index.tpl');
+  }
+  function addProduct(){
+    $this->smarty->display('templates/newProduct.tpl');
   }
 }
 ?>

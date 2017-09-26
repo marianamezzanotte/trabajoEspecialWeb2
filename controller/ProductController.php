@@ -25,11 +25,16 @@ class ProductController
     $this->view->viewProducts($productos, $categories);
   }
 
+  public function showAddProduct()
+  {
+    $this->view->addProduct();
+  }
+
   public function destroy($params)
   {
     $id_producto = $params[0];
     $this->model->deleteProduct($id_producto);
-    header('Location: '.HOME);
+    //header('Location: '.HOME);
   }
 }
  ?>
