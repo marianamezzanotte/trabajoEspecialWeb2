@@ -30,11 +30,15 @@ class ProductController
     $this->view->addProduct();
   }
 
-  public function destroy($params)
+  public function destroy()
   {
-    $id_producto = $params[0];
-    $this->model->deleteProduct($id_producto);
-    //header('Location: '.HOME);
+    if(isset(_$GET['id']))
+    {
+      $id_producto = $_GET['id'];
+      $this->model->deleteProduct($id_producto);
+    }
+
+    header('Location: '.HOME. 'home');
   }
 }
  ?>

@@ -35,7 +35,7 @@ if(isset($_GET['action'])){
             $controller->$metodo();
             break;
           case 'deleteProduct':
-            $controller->$metodo($params);
+            $controller->$metodo();
             break;
           default:
           $controller->$metodo();
