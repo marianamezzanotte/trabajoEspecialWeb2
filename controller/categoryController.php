@@ -25,5 +25,10 @@ class CategoryController
   {
     $this->view->addCategory();
   }
+
+  public function addCategory1(){
+    $category = $_POST['description'];
+    $this->model->saveCategory($category);
+  }
 }
  ?>

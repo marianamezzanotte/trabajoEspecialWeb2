@@ -3,10 +3,10 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h1>Agregar Categorias</h1>
-      <form>
+      <form action = "addCategory" method="post">
         <div class="form-group">
           <label for="category-name">Nombre de Categoria:</label>
-          <input type="text" class="form-control" id="category-name" placeholder="Nombre de la categoria">
+          <input type="text" class="form-control" id="category-name" name = 'description' placeholder="Nombre de la categoria">
         </div>
         <button type="submit" class="btn btn-default">Agregar Categoria</button>
       </form>

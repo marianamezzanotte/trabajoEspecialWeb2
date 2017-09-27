@@ -11,7 +11,8 @@ class ConfigApp
       'categories' => 'CategoryController#index',
       'addCategory'=> 'CategoryController#showAddCategory',
       'addProduct' => 'ProductController#showAddProduct',
-      'deleteProduct' => 'ProductController#destroy'
+      'deleteProduct' => 'ProductController#destroy',
+      'addCategory1' => 'CategoryController#addCategory',
     ];
 
 }
