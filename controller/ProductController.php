@@ -32,7 +32,7 @@ class ProductController
 
   public function destroy()
   {
-    if(isset(_$GET['id']))
+    if(isset($_GET['id']))
     {
       $id_producto = $_GET['id'];
       $this->model->deleteProduct($id_producto);
