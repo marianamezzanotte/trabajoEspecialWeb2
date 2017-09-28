@@ -27,7 +27,7 @@ class CategoryController
   }
 
   public function addCategory1(){
-    $category = $_POST['description'];
+    $category = $_POST['nombre'];
     $this->model->saveCategory($category);
   }
 }

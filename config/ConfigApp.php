@@ -12,7 +12,7 @@ class ConfigApp
       'addCategory'=> 'CategoryController#showAddCategory',
       'addProduct' => 'ProductController#showAddProduct',
       'deleteProduct' => 'ProductController#destroy',
-      'addCategory1' => 'CategoryController#addCategory',
+      'addCategory1' => 'CategoryController#addCategory1',
     ];
 
 }
