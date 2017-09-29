@@ -2,7 +2,7 @@
 require_once('libs/smarty-3.1.30/libs/Smarty.class.php');
 class GroceryView
 {
-  private $smarty;
+  protected $smarty;
   function __construct()
   {
     $this->smarty = new Smarty();
@@ -13,7 +13,8 @@ class GroceryView
     $this->smarty->assign('categories', $categories);
     $this->smarty->display('templates/index.tpl');
   }
-  function addProduct(){
+  function addProduct($categories){
+    $this->smarty->assign('categories', $categories);
     $this->smarty->display('templates/newProduct.tpl');
   }
 }

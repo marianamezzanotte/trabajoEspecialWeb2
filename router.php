@@ -3,7 +3,12 @@ define('ACTION', 0);
 define('PARAMS', 1);
 include_once 'controller/ProductController.php';
 include_once 'controller/CategoryController.php';
+include_once 'controller/LoginController.php';
+include_once 'controller/SecuredController.php';
 include_once 'config/ConfigApp.php';
+
+
+include_once 'controller/Controller.php';
 
 //$controllerProduct = new ProductController();
 //$controllerCategory = new CategoryController();

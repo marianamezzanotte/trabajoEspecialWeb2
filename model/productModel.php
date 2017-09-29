@@ -5,9 +5,9 @@ class ProductModel extends GroceryModel
 {
   //vamos a hacer una clase padre y esta va a heredar de la misma
   // asi no repetimos codigo, y la conexion a la base la hacemos una sola vez
-  function addProduct($nombre, $imagen, $precio, $id_categoria, $descuento){
-    $sentencia = $this->db->prepare('INSERT INTO productos(nombre, imagen, precio, id_categoria, descuento) VALUES(?,?,?,?,?)');
-    $sentencia->execute([$nombre, $imagen, $precio, $id_categoria, $descuento]);
+  function saveProduct($product, $precio, $categoria, $descuento){
+    $sentencia = $this->db->prepare('INSERT INTO productos(nombre, precio, id_categoria, descuento) VALUES(?,?,?,?)');
+    $sentencia->execute([$product, $precio, $categoria, $descuento]);
   }
 
   function getProducts(){

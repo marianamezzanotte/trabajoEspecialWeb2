@@ -9,10 +9,19 @@ class ConfigApp
       'home'=> 'ProductController#index',
       'products' => 'ProductController#index',
       'categories' => 'CategoryController#index',
+      'login' => 'LoginController#index',
+
       'addCategory'=> 'CategoryController#showAddCategory',
-      'addProduct' => 'ProductController#showAddProduct',
-      'deleteProduct' => 'ProductController#destroy',
       'addCategory1' => 'CategoryController#addCategory1',
+
+      'addProduct' => 'ProductController#showAddProduct',
+      'addProduct1' => 'ProductController#addProduct1',
+
+      'deleteProduct' => 'ProductController#destroy',
+      'deleteCategory' => 'CategoryController#destroy',
+      'logout' => 'LoginController#destroy',
+
+      'verificarUsuario' => 'LoginController#verify',
     ];
 
 }
