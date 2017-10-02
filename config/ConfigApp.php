@@ -22,6 +22,10 @@ class ConfigApp
       'logout' => 'LoginController#destroy',
 
       'verificarUsuario' => 'LoginController#verify',
+
+      'modifyCategory' => 'CategoryController#updateCategory',
+
+
     ];
 
 }

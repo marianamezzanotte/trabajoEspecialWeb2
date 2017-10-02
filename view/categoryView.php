@@ -17,5 +17,11 @@ class CategoryView
     $this->smarty->display('templates/newCategory.tpl');
   }
 
+  function modifyCategory($categories){
+    $this->smarty->assign('categories', $categories);
+    $this->smarty->display('templates/modifyCategory.tpl');
+
+  }
+
 }
 ?>

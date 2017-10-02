@@ -14,7 +14,13 @@ class CategoryModel extends GroceryModel
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  function updateCategory($id, $nombre){
+  function getCategory($id){
+    $sentencia = $this->db->prepare( "select * from categorias where id= ?");
+    $sentencia->execute($id);
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+  function updateCat($id, $nombre){
     $sentencia = $this->db->prepare('UPDATE categorias SET nombre = ? WHERE id = ?');
     $sentencia->execute([$nombre, $id]);
   }
