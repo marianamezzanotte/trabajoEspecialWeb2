@@ -5,7 +5,7 @@ class ConfigApp
     public static $ACTION = 'action';
     public static $PARAMS = 'params';
     public static $ACTIONS = [
-      ''=> 'index',
+      ''=> 'ProductController#index',
       'home'=> 'ProductController#index',
       'products' => 'ProductController#index',
       'categories' => 'CategoryController#index',

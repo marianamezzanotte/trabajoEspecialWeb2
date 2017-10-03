@@ -1,8 +1,6 @@
 <?php
 class CategoryModel extends GroceryModel
 {
-  //vamos a hacer una clase padre y esta va a heredar de la misma
-  // asi no repetimos codigo, y la conexion a la base la hacemos una sola vez
   function saveCategory($nombre){
     $sentencia = $this->db->prepare('INSERT INTO categorias(nombre) VALUES(?)');
     $sentencia->execute([$nombre]);
