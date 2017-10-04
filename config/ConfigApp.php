@@ -23,7 +23,7 @@ class ConfigApp
 
       'verificarUsuario' => 'LoginController#verify',
 
-      'showUpdateCategory' => 'CategoryController#showUpdateCategory',
+      'modifyCategory' => 'CategoryController#showUpdateCategory',
       'updateCategory' => 'CategoryController#updateCategory',
 
 
