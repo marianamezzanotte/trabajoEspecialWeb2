@@ -14,7 +14,7 @@ class CategoryModel extends GroceryModel
 
   function getCategory($id){
     $sentencia = $this->db->prepare( "select * from categorias where id= ?");
-    $sentencia->execute($id);
+    $sentencia->execute([$id]);
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 

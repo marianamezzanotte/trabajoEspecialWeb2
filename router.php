@@ -29,6 +29,13 @@ if(isset($_GET['action'])){
       $action = explode('#', ConfigApp:: $ACTIONS[$action]);
       $controller = new $action[0]();
       $metodo = $action[1];
+      if(isset($params) && $params != null){
+        echo $controller->$metodo($params);
+      }
+      else{
+        echo $controller->$metodo();
+      }
+    /*
         switch ($action) {
           case 'categories':
             $controller->$metodo();
@@ -42,11 +49,16 @@ if(isset($_GET['action'])){
           case 'deleteProduct':
             $controller->$metodo();
             break;
+          case 'modifyCategorie':
+            $controller->$metodo();
+          break;
           default:
           $controller->$metodo();
             //http_response_code(404);
             break;
+        
         }
+      */
     }
 }
 

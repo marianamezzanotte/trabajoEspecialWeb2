@@ -45,7 +45,7 @@ class CategoryController extends SecuredController
     header('Location: '.HOME. 'home');
   }
 
-  public function showUpdateCategory($params){
+  public function categoryModificator($params){
     $id_categoria = $params[0];
     $category = $this->model->getCategory($id_categoria);
     $this->view->modifyForm($category);
