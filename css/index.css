@@ -1,0 +1,17 @@
+.nav-separator{
+    border-right: 1px solid black;
+}
+
+.bottom-nav-separator{
+    border-bottom: 1px solid black;
+}
+.content-space{
+    min-height: 25em;
+}
+.footer{
+    min-height: 15em;
+}
+
+.nav:hover {
+    background-color:"red";
+}
