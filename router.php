@@ -1,12 +1,23 @@
 <?php
 define('ACTION', 0);
 define('PARAMS', 1);
+
+include_once 'controller/SetupController.php';
+
+$setup = new SetupController();
+
+if(!$setup->setupOk()){
+  echo 'Instale el sistema para continuar...';
+  die;
+}else{
+  include_once 'dbconfig.php';
+}
+
 include_once 'controller/ProductController.php';
 include_once 'controller/CategoryController.php';
 include_once 'controller/LoginController.php';
 include_once 'controller/SecuredController.php';
 include_once 'config/ConfigApp.php';
-
 
 include_once 'controller/Controller.php';
 
@@ -30,18 +41,6 @@ if(isset($_GET['action'])){
       $controller = new $action[0]();
       $metodo = $action[1];
         switch ($action) {
-          case 'categories':
-            $controller->$metodo();
-            break;
-          case 'products':
-            $controller->$metodo();
-            break;
-          case 'addCategory':
-            $controller->$metodo();
-            break;
-          case 'deleteProduct':
-            $controller->$metodo();
-            break;
           default:
           $controller->$metodo();
             //http_response_code(404);

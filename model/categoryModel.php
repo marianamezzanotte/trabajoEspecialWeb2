@@ -7,7 +7,7 @@ class CategoryModel extends GroceryModel
   }
 
   function getCategories(){
-    $sentencia = $this->db->prepare( "select * from categorias");
+    $sentencia = $this->db->prepare("select * from categorias");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
