@@ -1,32 +1,31 @@
-$("document").ready(renderHome);
-$("#home").on("click", renderHome);
-$("#products").on("click", renderProducts);
-$("#offers").on("click", renderOffers);
-$("#aboutUs").on("click", renderAboutUs);
+$("document").ready(function(){
+    renderSection("home");
+});
 
-function renderHome(){
 
-    $.post("home","", function(response){
+$(".sectionLink").on("click", function(e){
+    e.preventDefault();
+    renderSection(this.name);
+});
+
+
+function renderSection(name){
+    $.post(name,"", function(response){
         $(".js-section-content").html(response);
-   });
-
+        activateButtonHanlers();
+    });
 }
 
-function renderProducts(){
-    $.post("products","", function(response){
-        $(".js-section-content").html(response);
-   });
+
+function activateButtonHanlers(){
+    $(".js-category-buttons").on("click", function(){
+        renderCategory(this.id);
+    });
 }
 
-function renderOffers(){
-    $.post("offers","", function(response){
-        $(".js-section-content").html(response);
-   });
-}
-
-function renderAboutUs(e){
-
-    $.post("aboutUs","", function(response){
-        $(".js-section-content").html(response);
-   });
+function renderCategory(categoryId){
+    let url = "categoryFilter/"+ categoryId;
+    $.post(url,"", function(response){
+        $(".js-product-list").html(response);
+    });
 }

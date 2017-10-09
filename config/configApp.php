@@ -10,7 +10,9 @@ class ConfigApp
       'home'=> 'IndexController#home',
       'products'=> 'IndexController#products',
       'offers'=> 'IndexController#offers',
-      'aboutUs'=> 'IndexController#aboutUs'
+      'aboutUs'=> 'IndexController#aboutUs',
+      // Refactorizar cuando se cree el product Controller
+      'categoryFilter' => 'IndexController#productsByCategory'
     ];
 
 }
