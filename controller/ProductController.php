@@ -1,7 +1,7 @@
 <?php
+include_once('view/GroceryView.php');
 include_once('model/ProductModel.php');
 include_once('model/CategoryModel.php');
-include_once('view/GroceryView.php');
 include_once('controller/SecuredController.php');
 
 //define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -52,7 +52,6 @@ class ProductController extends SecuredController
       $id_producto = $_GET['id'];
       $this->model->deleteProduct($id_producto);
     }
-
     header('Location: '.HOME. 'home');
   }
 }
