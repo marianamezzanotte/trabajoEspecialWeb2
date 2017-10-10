@@ -1,7 +1,7 @@
 <?php
+include_once('controller/SecuredController.php');
 include_once('model/CategoryModel.php');
 include_once('view/CategoryView.php');
-include_once('controller/SecuredController.php');
 
 
 //define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
