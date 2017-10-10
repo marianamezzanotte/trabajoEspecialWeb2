@@ -1,23 +1,14 @@
 <?php
-define('ACTION', 0);
-define('PARAMS', 1);
-include_once 'controller/ProductController.php';
-include_once 'controller/CategoryController.php';
-include_once 'controller/LoginController.php';
-include_once 'controller/SecuredController.php';
-include_once 'config/ConfigApp.php';
 
-
-include_once 'controller/Controller.php';
-
-//$controllerProduct = new ProductController();
-//$controllerCategory = new CategoryController();
+include_once("config/configApp.php");
+include_once("controller/indexController.php");
+include_once("controller/productController.php");
 
 function parseURL($url)
 {
   $urlExploded = explode('/', $url);
-  $arrayReturn[ConfigApp::$ACTION] = $urlExploded[ACTION];
-  $arrayReturn[ConfigApp::$PARAMS] = isset($urlExploded[PARAMS]) ? array_slice($urlExploded,1) : null;
+  $arrayReturn[ConfigApp::$ACTION] = $urlExploded[0];
+  $arrayReturn[ConfigApp::$PARAMS] = isset($urlExploded[1]) ? array_slice($urlExploded, 1) : null;
   return $arrayReturn;
 }
 
@@ -29,24 +20,12 @@ if(isset($_GET['action'])){
       $action = explode('#', ConfigApp:: $ACTIONS[$action]);
       $controller = new $action[0]();
       $metodo = $action[1];
-        switch ($action) {
-          case 'categories':
-            $controller->$metodo();
-            break;
-          case 'products':
-            $controller->$metodo();
-            break;
-          case 'addCategory':
-            $controller->$metodo();
-            break;
-          case 'deleteProduct':
-            $controller->$metodo();
-            break;
-          default:
-          $controller->$metodo();
-            //http_response_code(404);
-            break;
-        }
+      if(isset($params) && $params != null){
+        echo $controller->$metodo($params);
+      }
+      else{
+        echo $controller->$metodo();
+      }
     }
 }
 

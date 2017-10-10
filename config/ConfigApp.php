@@ -5,30 +5,17 @@ class ConfigApp
     public static $ACTION = 'action';
     public static $PARAMS = 'params';
     public static $ACTIONS = [
-      ''=> 'ProductController#index',
-      'home'=> 'ProductController#index',
-      'products' => 'ProductController#index',
-      'categories' => 'CategoryController#index',
-      'login' => 'LoginController#index',
-
-      'addCategory'=> 'CategoryController#showAddCategory',
-      'addCategory1' => 'CategoryController#addCategory1',
-
-      'addProduct' => 'ProductController#showAddProduct',
-      'addProduct1' => 'ProductController#addProduct1',
-
-      'deleteProduct' => 'ProductController#destroy',
-      'deleteCategory' => 'CategoryController#destroy',
-      'logout' => 'LoginController#destroy',
-
-      'verificarUsuario' => 'LoginController#verify',
-
-      'showUpdateCategory' => 'CategoryController#showUpdateCategory',
-      'updateCategory' => 'CategoryController#updateCategory',
-
-
+      ''=> 'IndexController#index',
+      'index' => 'IndexController#index',
+      'home'=> 'IndexController#home',
+      'catalogue'=> 'IndexController#catalogue',
+      'offers'=> 'IndexController#offers',
+      'aboutUs'=> 'IndexController#aboutUs',
+      
+      'categoryFilter' => 'ProductController#getProductsByCategory',
+      'allProducts' => 'ProductController#getAllProducts'
     ];
 
 }
 
- ?>
+?>

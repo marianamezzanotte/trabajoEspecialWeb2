@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Grocery Online</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
+<header>
+    <div class="container-fluid p-4 mb-2 bg-danger">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="" alt="logo">
+            </div>
+            <div class="col-md-4">
+                <h1>Title</h1>
+            </div>
+        </div>
+    </div>
+</header>

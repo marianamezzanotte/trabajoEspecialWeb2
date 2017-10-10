@@ -1,59 +1,42 @@
 <?php
-include_once('model/ProductModel.php');
-include_once('model/CategoryModel.php');
-include_once('view/GroceryView.php');
-include_once('controller/SecuredController.php');
 
-//define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/');
-/**
- *
- */
-class ProductController extends SecuredController
-{
+    include_once("view/indexView.php");
+    include_once("view/productView.php");
+    include_once("controller/controller.php");
+    include_once("model/productModel.php");
+    include_once("model/categoriesModel.php");
 
-  private $modelCategory;
-  function __construct()
-  {
-    $this->view = new GroceryView();
-    $this->model = new ProductModel();
-    $this->modelCategory = new CategoryModel();
-  }
-
-  public function index()
-  {
-    $productos = $this->model->getProducts();
-    $categories = $this->modelCategory->getCategories();
-    $this->view->viewProducts($productos, $categories);
-  }
-
-  public function showAddProduct()
-  {
-    //$this->view->addProduct();
-    $categories = $this->modelCategory->getCategories();
-    $this->view->addProduct($categories);
-
-  }
-
-  public function addProduct1(){
-    $product = $_POST['nombre'];
-    $precio = $_POST['precio'];
-    $categoria = $_POST['categoria'];
-    $descuento =  $_POST['descuento'];
-
-    $this->model->saveProduct($product, $precio, $categoria, $descuento);
-
-    header('Location: '.HOME. 'home');
-  }
-
-  public function destroy()
-  {
-    if(isset($_GET['id']))
+    class ProductController extends Controller 
     {
-      $id_producto = $_GET['id'];
-      $this->model->deleteProduct($id_producto);
+
+        function __construct(){
+            parent::__construct();
+            $this->productModel = new ProductModel();
+            $this->categoriesModel = new CategoriesModel();
+            $this->view = new ProductView();
+        
+        }   
+
+        public function getProductsByCategory($categoryInfo){
+            $categories = $this->categoriesModel->getCategories();
+            $products = $this->productModel->getProductsByCategory($categoryInfo[0]);
+            $this->view->productsByCategory($products, $categoryInfo[1],$categories);
+        }
+
+        public function getAllProducts($categoryInfo){
+            $categories = $this->categoriesModel->getCategories();
+            $products = $this->productModel->getProducts();
+            $this->view->productsByCategory($products, $categoryInfo[1],$categories);
+        }
+
+        public function offers(){
+            $this->productModel->offers();
+        }  
+        
+        public function aboutUs(){
+            $this->productModel->aboutUs();
+        }
     }
 
-    header('Location: '.HOME. 'home');
-  }
-}
- ?>
+
+?>
