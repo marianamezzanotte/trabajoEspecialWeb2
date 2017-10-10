@@ -37,11 +37,11 @@ class SetupController extends Controller
       // si no hay error creo el archivo de config.
       $file = fopen($this->configFile, 'w');
       fwrite($file, "
-      <?php
-      define('DB_HOST', '".$_POST['host']."');
-      define('DB_DATABASE', '".$_POST['database']."');
-      define('DB_USERNAME', '".$_POST['username']."');
-      define('DB_PASSWORD', '".$_POST['password']."');
+<?php
+define('DB_HOST', '".$_POST['host']."');
+define('DB_DATABASE', '".$_POST['database']."');
+define('DB_USERNAME', '".$_POST['username']."');
+define('DB_PASSWORD', '".$_POST['password']."');
       ");
       fclose($file);
       echo 'Instación completa.';
@@ -51,9 +51,5 @@ class SetupController extends Controller
       echo 'Debe completar todos los campos del formulario.';
     }
 
-
   }
-
-
-
 }
