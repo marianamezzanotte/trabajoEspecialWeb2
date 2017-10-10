@@ -8,32 +8,27 @@ class IndexView extends View
         parent::__construct();
     }
 
-    function indexView(){
+    function index(){
         $this->smarty->display('index.tpl');
     }
 
-    function homeView(){
+    function home(){
         $this->smarty->display('home.tpl');
     }
 
-    // cambiar a "productSectionView"
-    function productsView($categories, $products){
+    function catalogue($categories, $products, $categoryName){
         $this->smarty->assign("categories", $categories);
         $this->smarty->assign("products", $products);
-        $this->smarty->display('products.tpl');
+        $this->smarty->assign("categoryName",$categoryName);
+        $this->smarty->display('catalogue.tpl');
     }
+    
 
-    // Cambiar nombre a la seccion de produtos por Catalogo
-    function productsByCategory($products){
-        $this->smarty->assign("products", $products);
-        $this->smarty->display('filteredProducts.tpl');
-    }
-
-    function offersView(){
+    function offers(){
         $this->smarty->display('offers.tpl');
     }
 
-    function aboutUsView(){
+    function aboutUs(){
         $this->smarty->display('aboutUs.tpl');
     }
 

@@ -7,7 +7,7 @@
                         <a href="home" name="home" class="sectionLink">Home</a>
                     </li>
                     <li role="presentation" class="nav-item p-1 mb-2 nav-separator">
-                        <a href="products" name="products" class="sectionLink">Productos</a>
+                        <a href="catalogue" name="catalogue" class="sectionLink">Catalogo</a>
                     </li>
                     <li role="presentation" class="nav-item p-1 mb-2 nav-separator">
                         <a href="offers" name="offers" class="sectionLink">Promociones</a>

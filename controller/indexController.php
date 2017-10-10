@@ -13,37 +13,30 @@
             $this->view = new IndexView();
         }
 
-
-        // Mejorar todo a nombre + Section para indicar que este controller solo 
         public function index()
         {
-          $this->view->indexView();
+          $this->view->index();
         }
             
         public function home()
         {
-          $this->view->homeView();
+          $this->view->home();
         }
 
-        // Refactorizar: Cuando carga esta seccion tiene que cargar automaticamente una categoria
-        public function products(){
+        public function catalogue(){
+            $categoryName = "Todos";
             $categories = $this->model->getCategories();
             $products = $this->model->getProducts();
-            $this->view->productsView($categories,$products);
+            $this->view->catalogue($categories,$products,$categoryName);
         }
 
-        // Este tiene que ir en product controller
-        public function productsByCategory($categoryID){
-            $products = $this->model->getProductsByCategory($categoryID[0]);
-            $this->view->productsByCategory($products);
-        }
 
         public function offers(){
-            $this->view->offersView();
+            $this->view->offers();
         }  
         
         public function aboutUs(){
-            $this->view->aboutUsView();
+            $this->view->aboutUs();
         }
     }
 

@@ -8,11 +8,12 @@ class ConfigApp
       ''=> 'IndexController#index',
       'index' => 'IndexController#index',
       'home'=> 'IndexController#home',
-      'products'=> 'IndexController#products',
+      'catalogue'=> 'IndexController#catalogue',
       'offers'=> 'IndexController#offers',
       'aboutUs'=> 'IndexController#aboutUs',
-      // Refactorizar cuando se cree el product Controller
-      'categoryFilter' => 'IndexController#productsByCategory'
+      
+      'categoryFilter' => 'ProductController#getProductsByCategory',
+      'allProducts' => 'ProductController#getAllProducts'
     ];
 
 }

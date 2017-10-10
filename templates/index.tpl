@@ -9,6 +9,7 @@
         </article>
         {include file="footer.tpl"}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="js/navigation.js"></script>
+        <script src="js/sectionNavigation.js"></script>
+        <script src="js/categoryNavigation.js"></script>
     </body>
 </html>
