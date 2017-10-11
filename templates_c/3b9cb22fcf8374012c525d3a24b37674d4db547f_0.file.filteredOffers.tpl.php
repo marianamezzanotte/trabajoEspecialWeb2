@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-11 05:04:57
-  from "C:\xampp\htdocs\Proyectos\TPERWK\templates\filteredProducts.tpl" */
+/* Smarty version 3.1.30, created on 2017-10-11 05:25:20
+  from "C:\xampp\htdocs\Proyectos\TPERWK\templates\filteredOffers.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59dd8a5990ac61_07815253',
+  'unifunc' => 'content_59dd8f2010bc45_27989957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6559e7783f5024c7094bbf5d06531e7bbfbb1ac7' => 
+    '3b9cb22fcf8374012c525d3a24b37674d4db547f' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Proyectos\\TPERWK\\templates\\filteredProducts.tpl',
-      1 => 1507690107,
+      0 => 'C:\\xampp\\htdocs\\Proyectos\\TPERWK\\templates\\filteredOffers.tpl',
+      1 => 1507692316,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59dd8a5990ac61_07815253 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59dd8f2010bc45_27989957 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
     <div class="col-md-12 ml-3 mb-2  product-shower-separator ">
@@ -50,15 +50,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
                     <span>Precio: <?php echo $_smarty_tpl->tpl_vars['product']->value["precio"];?>
 $</span>
                 </div>
-                <?php ob_start();
-echo $_smarty_tpl->tpl_vars['product']->value["descuento"] > 0;
-$_prefixVariable1=ob_get_clean();
-if ($_prefixVariable1) {?>
                     <div>
                         <span>Descuento: <?php echo $_smarty_tpl->tpl_vars['product']->value["descuento"];?>
 %</span>
                     </div>
-                <?php }?>
                 <div>
                     <?php $_smarty_tpl->_assignInScope('index', $_smarty_tpl->tpl_vars['product']->value["id_categoria"]-1);
 ?>

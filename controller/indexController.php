@@ -9,7 +9,9 @@
 
         function __construct(){
             parent::__construct();
-            $this->model = new ProductModel();
+            $this->productsModel = new ProductModel();
+            $this->categoriesModel = new CategoriesModel();
+            $this->offersModel = new OffersModel();
             $this->view = new IndexView();
         }
 
@@ -25,14 +27,17 @@
 
         public function catalogue(){
             $categoryName = "Todos";
-            $categories = $this->model->getCategories();
-            $products = $this->model->getProducts();
+            $categories = $this->categoriesModel->getCategories();
+            $products = $this->productsModel->getProducts();
             $this->view->catalogue($categories,$products,$categoryName);
         }
 
 
         public function offers(){
-            $this->view->offers();
+            $categoryName = "Todas";
+            $categories = $this->categoriesModel->getCategories();
+            $offers = $this->offersModel->getOffers();
+            $this->view->offers($categories,$offers,$categoryName);
         }  
         
         public function aboutUs(){

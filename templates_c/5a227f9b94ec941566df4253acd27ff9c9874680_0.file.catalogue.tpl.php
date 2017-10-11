@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-10 16:14:17
+/* Smarty version 3.1.30, created on 2017-10-11 04:05:05
   from "C:\xampp\htdocs\Proyectos\TPERWK\templates\catalogue.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59dcd5b98629f8_01783272',
+  'unifunc' => 'content_59dd7c5172e318_71141781',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a227f9b94ec941566df4253acd27ff9c9874680' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\TPERWK\\templates\\catalogue.tpl',
-      1 => 1507644825,
+      1 => 1507687499,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:filteredProducts.tpl' => 1,
   ),
 ),false)) {
-function content_59dcd5b98629f8_01783272 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59dd7c5172e318_71141781 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="row">
@@ -40,7 +40,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
 ?>
         <div class="row">
             <div class="col-md-12 mb-1">
-                <button class="btn btn-default ml-2 category-button js-category-buttons" id="<?php echo $_smarty_tpl->tpl_vars['category']->value['id_categoria'];?>
+                <button class="btn btn-default ml-2  js-category-buttons category-button" id="<?php echo $_smarty_tpl->tpl_vars['category']->value['id_categoria'];?>
 ">
                     <?php echo $_smarty_tpl->tpl_vars['category']->value["nombre"];?>
 

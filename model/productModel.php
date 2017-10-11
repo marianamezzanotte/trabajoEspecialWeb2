@@ -17,12 +17,7 @@ class ProductModel extends Model
         return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    // Esto puede ir a categories Model
-    function getCategories(){
-        $sentencia = $this->db->prepare( "select * from categoria");
-        $sentencia->execute();
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
-      }
+
 }
 
 

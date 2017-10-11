@@ -12,8 +12,11 @@ class ConfigApp
       'offers'=> 'IndexController#offers',
       'aboutUs'=> 'IndexController#aboutUs',
       
+      'allProducts' => 'ProductController#getAllProducts',
       'categoryFilter' => 'ProductController#getProductsByCategory',
-      'allProducts' => 'ProductController#getAllProducts'
+
+      'allOffers' => 'OffersController#getAllOffers',
+      'offersFilter' => 'OffersController#getOffersByCategory'
     ];
 
 }

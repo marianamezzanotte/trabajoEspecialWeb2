@@ -24,7 +24,10 @@ class IndexView extends View
     }
     
 
-    function offers(){
+    function offers($categories, $products, $categoryName){
+        $this->smarty->assign("categories", $categories);
+        $this->smarty->assign("products", $products);
+        $this->smarty->assign("categoryName",$categoryName);
         $this->smarty->display('offers.tpl');
     }
 

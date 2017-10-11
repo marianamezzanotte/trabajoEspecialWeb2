@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-10 15:54:29
+/* Smarty version 3.1.30, created on 2017-10-11 04:06:54
   from "C:\xampp\htdocs\Proyectos\TPERWK\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59dcd1153b4775_26045992',
+  'unifunc' => 'content_59dd7cbe496ac0_12811118',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b40976a50c178b98de307f0b8a3ffaab71eba13c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Proyectos\\TPERWK\\templates\\index.tpl',
-      1 => 1507642137,
+      1 => 1507687597,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_59dcd1153b4775_26045992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59dd7cbe496ac0_12811118 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -51,6 +51,9 @@ $_smarty_tpl->_subTemplateRender("file:head.tpl", $_smarty_tpl->cache_id, $_smar
 >
         <?php echo '<script'; ?>
  src="js/categoryNavigation.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="js/offersNavigation.js"><?php echo '</script'; ?>
 >
     </body>
 </html><?php }

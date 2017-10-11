@@ -11,7 +11,7 @@
         {foreach from=$categories item=category}
         <div class="row">
             <div class="col-md-12 mb-1">
-                <button class="btn btn-default ml-2 category-button js-category-buttons" id="{$category['id_categoria']}">
+                <button class="btn btn-default ml-2  js-category-buttons category-button" id="{$category['id_categoria']}">
                     {$category["nombre"]}
                 </button>
             </div>
