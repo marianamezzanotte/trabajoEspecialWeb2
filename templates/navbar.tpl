@@ -2,7 +2,7 @@
     <div class="container-fuid">
         <div class="row">
             <div class="col-md-12">
-                <ul class="nav nav-pills nav-justified bottom-nav-separator">
+                <ul class="nav nav-pills nav-justified bottom-separator">
                     <li role="presentation" class="nav-item p-1 mb-2 nav-separator">
                         <a href="home" name="home" class="sectionLink">Home</a>
                     </li>

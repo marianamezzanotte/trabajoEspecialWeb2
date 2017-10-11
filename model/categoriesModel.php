@@ -9,6 +9,7 @@ class CategoriesModel extends Model
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_ASSOC);
       }
+
 }
 
 

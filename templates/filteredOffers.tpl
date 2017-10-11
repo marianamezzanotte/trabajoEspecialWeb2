@@ -18,11 +18,9 @@
                 <div>
                     <span>Precio: {$product["precio"]}$</span>
                 </div>
-                {if {$product["descuento"] > 0}}
                     <div>
                         <span>Descuento: {$product["descuento"]}%</span>
                     </div>
-                {/if}
                 <div>
                     {assign var="index" value=$product["id_categoria"]-1}
                     <span>{$categories[$index]["nombre"]}</span>
