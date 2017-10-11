@@ -10,8 +10,8 @@ class Controller
         $this->baseURL = "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF'])."/";
     }
 
-    public function goBack($endpoint = ""){
-        header("Location : ".$baseURL.$endpoint);
+    public function goToEndPoint($endpoint = ""){
+        header("Location : ".$this->baseURL.$endpoint);
     }
 }
 

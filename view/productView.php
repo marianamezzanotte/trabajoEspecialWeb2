@@ -7,7 +7,6 @@ class ProductView extends View
     function __construct() {
         parent::__construct();
     }
-    // capaz se puede refactoriar
     function productsByCategory($products, $categoryName,$categories){
         $this->smarty->assign("products", $products);
         $this->smarty->assign("categoryName", $categoryName);

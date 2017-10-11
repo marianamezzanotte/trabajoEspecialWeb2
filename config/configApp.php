@@ -16,7 +16,10 @@ class ConfigApp
       'categoryFilter' => 'ProductController#getProductsByCategory',
 
       'allOffers' => 'OffersController#getAllOffers',
-      'offersFilter' => 'OffersController#getOffersByCategory'
+      'offersFilter' => 'OffersController#getOffersByCategory',
+
+      'login' => 'LoginController#loginPanel',
+      'verifyUser' => 'LoginController#verifyUser'
     ];
 
 }

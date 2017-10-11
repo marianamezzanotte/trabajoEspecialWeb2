@@ -4,6 +4,7 @@ include_once("config/configApp.php");
 include_once("controller/indexController.php");
 include_once("controller/productController.php");
 include_once("controller/offersController.php");
+include_once("controller/loginController.php");
 
 function parseURL($url)
 {
